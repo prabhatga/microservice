@@ -22,7 +22,7 @@ func SetCors(w http.ResponseWriter, r *http.Request) {
 			appengine.IsDevAppServer() {
 
 			w.Header().Set("Access-Control-Allow-Origin", clientOrigin)
-			w.Header().Set("Access-Control-Allow-Methods", "OPTIONS, GET, POST")
+			w.Header().Set("Access-Control-Allow-Methods", "DELETE, GET, HEAD, OPTIONS, PATCH, POST, PUT")
 			w.Header().Set("Access-Control-Allow-Credentials", "true")
 			w.Header().Set("Access-Control-Allow-Headers", "Content-Type")
 		}
